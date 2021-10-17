@@ -1,3 +1,6 @@
 [submodule "DIML"]
 	path = DIML
 	url = https://github.com/wl-zhao/DIML
+[submodule "dino"]
+	path = dino
+	url = https://github.com/facebookresearch/dino
