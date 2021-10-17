@@ -1,1 +1,1 @@
-# shiny-SSL4CV
+# SSL-ViT-highdata-lowlabel
