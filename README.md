@@ -1,1 +1,1 @@
-# VISUAL REPRESENTATION LEARNING WITH SELF-SUPERVISED ATTENTION FOR LOW-LABEL HIGH-DATA REGIME
+# Visual Representation Learning with Self-Supervised Attention for _Low-Label_ _High-Data_ Regime
