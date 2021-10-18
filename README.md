@@ -44,3 +44,42 @@ vits16 = torch.hub.load('facebookresearch/dino:main', 'dino_vits16')
 ## Usage
 ### Dataset Preparation
 Please follow the instruction in [FRN](https://github.com/Tsingularity/FRN) for few-shot image classification and [RevisitDML](https://github.com/Confusezius/Revisiting_Deep_Metric_Learning_PyTorch) for zero-shot image retrieval to download the datasets and put all the datasets in `data` folder.
+
+### Training and Evaluation for few-shot image classification
+- The first step is to extract features for base and novel classes using the pretrained SSL-ViT.
+- ```get_dino_miniimagenet_feats.ipynb``` extracts SSL-ViT features for the base and novel classes.
+- Change the hyper-parameter ```data_path``` to use CUB or tiered-ImageNet.
+- The SSL-ViT checkpoints for the various datasets are provided below (Note: this has only been trained without labels). We also provide the extracted features. 
+<table>
+  <tr>
+    <th>arch</th>
+    <th>dataset</th>
+    <th colspan="6">download</th>
+    <th colspan="6">extracted-train</th>
+    <th colspan="6">extracted-test</th>
+  </tr>
+    
+    <tr>
+    <td>ViT-S/16</td>
+    <td>mini-ImageNet</td>
+    <td><a href="https://drive.google.com/file/d/1kXdqIR15fYKANx97blXVm8Fbwiz-FTvF/view?usp=sharing">mini_imagenet_checkpoint.pth</a></td>
+    <td><a href="https://drive.google.com/file/d/1CcIF4NnDoAB12FCq4Q2Q0jrTxCk_wVfM/view?usp=sharing">train.p</a></td>
+    <td><a href="https://drive.google.com/file/d/1KpQkdOwFr_jM-t4t-gA9cMPWGFuqyV2Y/view?usp=sharing">test.p</a></td>
+    </tr>
+    
+    <tr>
+    <td>ViT-S/16</td>
+    <td>tiered-ImageNet</td>
+    <td><a href="https://drive.google.com/file/d/1ObdJQozacGBcAmh8iWBrXv6dG6-OaC1i/view?usp=sharing">tiered_imagenet_checkpoint.pth</a></td>
+    <td><a href="https://drive.google.com/file/d/1a7EdInD6JBWA3ppOWfhtVEBqNZWnq_13/view?usp=sharing">train.p</a></td>
+    <td><a href="https://drive.google.com/file/d/13WAjvQAE3Lwtj83wvHLfVKYWvaw_90Q6/view?usp=sharing">test.p</a></td>
+
+    </tr>
+    <td>ViT-S/16</td>
+    <td>CUB</td>
+    <td><a href="https://dl.fbaipublicfiles.com/dino/dino_deitsmall16_pretrain/dino_deitsmall16_pretrain.pth">cub_checkpoint.pth</a></td>
+    <td><a href="https://drive.google.com/file/d/1KfXbBCxDQ3CchFQVUSmTz2bjSfQKCmkW/view?usp=sharing">train.p</a></td>
+    <td><a href="https://drive.google.com/file/d/1pU21XZ2r8cDkFhwWwEwNcRB1FIIREDC_/view?usp=sharing">test.p</a></td>
+    </tr>
+</table>    
+
