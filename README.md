@@ -50,22 +50,14 @@ Please follow the instruction in [FRN](https://github.com/Tsingularity/FRN) for 
 - ```get_dino_miniimagenet_feats.ipynb``` extracts SSL-ViT features for the base and novel classes.
 - Change the hyper-parameter ```data_path``` to use CUB or tiered-ImageNet.
 - The SSL-ViT checkpoints for the various datasets are provided below (Note: this has only been trained without labels). We also provide the extracted features. 
-<table>
-    <tr>
-    <th>arch</th>
-    <th>dataset</th>
-    <th colspan="6">download</th>
-    <th colspan="6">extracted-train</th>
-    <th colspan="6">extracted-test</th>
-    </tr>
 
+<table> 
     <tr>
-    <td>ViT-S/16</td>
-    <td>mini-ImageNet</td>
-    <td><a href="https://drive.google.com/file/d/1kXdqIR15fYKANx97blXVm8Fbwiz-FTvF/view?usp=sharing">mini_imagenet_checkpoint.pth</a></td>
-    <td><a href="https://drive.google.com/file/d/1CcIF4NnDoAB12FCq4Q2Q0jrTxCk_wVfM/view?usp=sharing">train.p</a></td>
-    <td><a href="https://drive.google.com/file/d/1KpQkdOwFr_jM-t4t-gA9cMPWGFuqyV2Y/view?usp=sharing">test.p</a></td>
+        <th>arch</th>
+        <th>dataset</th>
+        <th colspan="6">download</th>
+        <th colspan="6">extracted-train</th>
+        <th colspan="6">extracted-test</th>
     </tr>
-
 </table>    
 
