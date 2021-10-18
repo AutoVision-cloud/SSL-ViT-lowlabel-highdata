@@ -1,4 +1,4 @@
-# Visual Representation Learning with Self-Supervised Attention for _Low-Label_ _High-Data_ Regime
+## Visual Representation Learning with Self-Supervised Attention for _Low-Label_ _High-Data_ Regime
 Created by [Prarthana Bhattacharyya](https://ca.linkedin.com/in/prarthana-bhattacharyya-44582a79).
 
 This repository contains PyTorch implementation for paper **Visual Representation Learning with Self-Supervised Attention for _Low-Label_ _High-Data_ Regime**.
