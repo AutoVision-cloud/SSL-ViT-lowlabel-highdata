@@ -11,3 +11,18 @@ Self-supervision has shown outstanding results for natural language processing, 
     <img src="figs/intro.png" width="700">
 </div>
 
+## Results
+SSL-ViT + few-shot image classification:
+<div align="center">
+    <img src="figs/fewshottable.png" width="700">
+</div>
+
+Qualitative analysis for base-classes chosen by supervised CNN and SSL-ViT for few-shot distribution calibration:
+<div align="center">
+    <img src="figs/qualitative.png" width="600">
+</div>
+
+SSL-ViT + zero-shot image retrieval:
+<div align="center">
+    <img src="figs/retrievaltable.png" width="700">
+</div>
