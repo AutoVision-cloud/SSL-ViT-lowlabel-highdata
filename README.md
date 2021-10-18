@@ -29,8 +29,10 @@ Self-supervision has shown outstanding results for natural language processing, 
 
 ## Pretraining Self-Supervised ViT
 - Run DINO with ViT-small network on a single node with 4 GPUs for 100 epochs with the following command. 
-```python
+```bash
 cd dino/
+```
+```python
 python -m torch.distributed.launch --nproc_per_node=4 main_dino.py --arch vit_small --data_path /path/to/imagenet/train --output_dir /path/to/saving_dir
 ```
 - For mini-ImageNet pretraining, we use the classes listed in: ```ssl-vit-fewshot/data/ImageNetSSLTrainingSplit_mini.txt```
@@ -85,4 +87,62 @@ Please follow the instruction in [FRN](https://github.com/Tsingularity/FRN) for 
 - For _n_-way-_k_-shot evaluation, we provide ```miniimagenet_evaluate_dinoDC.ipynb```.  
 
 ### Training and Evaluation for zero-shot image retrieval
+- To train the baseline CNN models, run the scripts in `DIML/scripts/baselines`. The checkpoints are saved in Training_Results folder. For example:
+```bash
+cd DIML/
+CUDA_VISIBLE_DEVICES=0 ./script/baselines/cub_runs.sh
+```
+- To train the supervised ViT and self-supervised ViT:
+```bash
+cp -r ssl-vit-retrieval/architectures/* DIML/ssl-vit-retrieval/architectures/
+```
+```bash
+CUDA_VISIBLE_DEVICES=0 ./script/baselines/cub_runs.sh --arch dino
+```
+- To test the models, first edit the checkpoint paths in `test_diml.py`, then run
+```bash
+CUDA_VISIBLE_DEVICES=0 ./scripts/diml/test_diml.sh cub200
+```
+<table> 
+    <tr>
+        <th>dataset</th>
+        <th >Loss</th>
+        <th >SSL-ViT-download</th>
+    </tr>
+    <tr>
+        <td>CUB</td>
+        <td>Margin</td>
+        <td><a href="https://drive.google.com/file/d/1Vs4U3NwecDC3aD2mMYqc13qf608Nsay4/view?usp=sharing">cub_ssl-vit-margin.pth</a></td>
+    </tr>
+    <tr>
+        <td>CUB</td>
+        <td>Proxy-NCA</td>
+        <td><a href="https://drive.google.com/file/d/1jAWMEqcu-XBHhlO6GN8qu3FoGF_-4rLT/view?usp=sharing">cub_ssl-vit-proxynca.pth</a></td>
+    </tr>
+    <tr>
+        <td>CUB</td>
+        <td>Multi-Similarity (MS)</td>
+        <td><a href="https://drive.google.com/file/d/1DB6vW-BrbzX-QND9jeYjZDzMmQC_wPSG/view?usp=sharing">cub_ssl-vit-ms.pth</a></td>
+    </tr>
+    <tr>
+        <td>Cars-196</td>
+        <td>Margin</td>
+        <td><a href="https://drive.google.com/file/d/1NLjXTVPkhTdtTPJ3_Npu-4R1BIH9YA2y/view?usp=sharing">cars_ssl-vit-margin.pth</a></td>
+    </tr>
+    <tr>
+        <td>Cars-196</td>
+        <td>Proxy-NCA</td>
+        <td><a href="https://drive.google.com/file/d/1hHuiMHdyMKxMA_eW248AOyxppqoH0mNE/view?usp=sharing">cars_ssl-vit-proxynca.pth</a></td>
+    </tr>
+    <tr>
+        <td>Cars-196</td>
+        <td>Multi-Similarity (MS)</td>
+        <td><a href="https://drive.google.com/file/d/1_BVKjBl1btYdEHHT_jHeIU0A25y9pkFW/view?usp=sharing">cars_ssl-vit-ms.pth</a></td>
+    </tr>
+</table>
 
+## Acknowledgement
+The code is based on:
+- [DINO](https://github.com/facebookresearch/dino)
+- [DC](https://github.com/ShuoYang-1998/Few_Shot_Distribution_Calibration)
+- [DIML](https://github.com/wl-zhao/DIML).
