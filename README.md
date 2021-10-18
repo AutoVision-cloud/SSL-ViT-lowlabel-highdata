@@ -97,6 +97,7 @@ CUDA_VISIBLE_DEVICES=0 ./script/baselines/cub_runs.sh
 cp -r ssl-vit-retrieval/architectures/* DIML/ssl-vit-retrieval/architectures/
 ```
 ```bash
+CUDA_VISIBLE_DEVICES=0 ./script/baselines/cub_runs.sh --arch vits
 CUDA_VISIBLE_DEVICES=0 ./script/baselines/cub_runs.sh --arch dino
 ```
 - To test the models, first edit the checkpoint paths in `test_diml.py`, then run
