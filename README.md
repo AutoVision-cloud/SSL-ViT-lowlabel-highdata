@@ -12,17 +12,31 @@ Self-supervision has shown outstanding results for natural language processing, 
 </div>
 
 ## Results
-SSL-ViT + few-shot image classification:
+- SSL-ViT + few-shot image classification:
 <div align="center">
     <img src="figs/fewshottable.png" width="700">
 </div>
 
-Qualitative analysis for base-classes chosen by supervised CNN and SSL-ViT for few-shot distribution calibration:
+- Qualitative analysis for base-classes chosen by supervised CNN and SSL-ViT for few-shot distribution calibration:
 <div align="center">
     <img src="figs/qualitative.png" width="600">
 </div>
 
-SSL-ViT + zero-shot image retrieval:
+- SSL-ViT + zero-shot image retrieval:
 <div align="center">
     <img src="figs/retrievaltable.png" width="700">
 </div>
+
+## Pretraining Self-Supervised ViT
+- Run DINO with ViT-small network on a single node with 4 GPUs for 100 epochs with the following command. 
+```python
+cd dino/
+python -m torch.distributed.launch --nproc_per_node=4 main_dino.py --arch vit_small --data_path /path/to/imagenet/train --output_dir /path/to/saving_dir
+```
+- For mini-ImageNet pretraining, we use the classes listed in: ```ssl-vit-fewshot/data/ImageNetSSLTrainingSplit_mini.txt```
+For tiered-ImageNet pretraining, we use the classes listed in: ```ssl-vit-fewshot/data/ImageNetSSLTrainingSplit_tiered.txt```
+- For CUB-200, Cars-196 and SOP, we use the pretrained model from:
+```python
+import torch
+vits16 = torch.hub.load('facebookresearch/dino:main', 'dino_vits16')
+```
