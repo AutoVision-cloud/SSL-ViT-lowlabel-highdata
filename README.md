@@ -43,4 +43,4 @@ vits16 = torch.hub.load('facebookresearch/dino:main', 'dino_vits16')
 
 ## Usage
 ### Dataset Preparation
-Please follow the instruction in [FRN](https://github.com/Tsingularity/FRN) for few-shot learning and [RevisitDML](https://github.com/Confusezius/Revisiting_Deep_Metric_Learning_PyTorch) for image retrieval to download the datasets and put all the datasets in `data` folder.
+Please follow the instruction in [FRN](https://github.com/Tsingularity/FRN) for few-shot image classification and [RevisitDML](https://github.com/Confusezius/Revisiting_Deep_Metric_Learning_PyTorch) for zero-shot image retrieval to download the datasets and put all the datasets in `data` folder.
