@@ -8,6 +8,6 @@ Self-supervision has shown outstanding results for natural language processing, 
 </br>
 
 <div align="center">
-    <img src="figs/intro.png" width="740">
+    <img src="figs/intro.png" width="700">
 </div>
 
