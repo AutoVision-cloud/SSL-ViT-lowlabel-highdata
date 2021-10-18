@@ -83,3 +83,6 @@ Please follow the instruction in [FRN](https://github.com/Tsingularity/FRN) for 
 </table>    
 
 - For _n_-way-_k_-shot evaluation, we provide ```miniimagenet_evaluate_dinoDC.ipynb```.  
+
+### Training and Evaluation for zero-shot image retrieval
+
