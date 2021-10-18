@@ -121,7 +121,7 @@ CUDA_VISIBLE_DEVICES=0 ./scripts/diml/test_diml.sh cub200
     </tr>
     <tr>
         <td>CUB</td>
-        <td>Multi-Similarity (MS)</td>
+        <td>Multi-Similarity</td>
         <td><a href="https://drive.google.com/file/d/1DB6vW-BrbzX-QND9jeYjZDzMmQC_wPSG/view?usp=sharing">cub_ssl-vit-ms.pth</a></td>
     </tr>
     <tr>
@@ -136,7 +136,7 @@ CUDA_VISIBLE_DEVICES=0 ./scripts/diml/test_diml.sh cub200
     </tr>
     <tr>
         <td>Cars-196</td>
-        <td>Multi-Similarity (MS)</td>
+        <td>Multi-Similarity</td>
         <td><a href="https://drive.google.com/file/d/1_BVKjBl1btYdEHHT_jHeIU0A25y9pkFW/view?usp=sharing">cars_ssl-vit-ms.pth</a></td>
     </tr>
 </table>
