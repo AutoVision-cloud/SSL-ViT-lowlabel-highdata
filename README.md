@@ -145,4 +145,4 @@ CUDA_VISIBLE_DEVICES=0 ./scripts/diml/test_diml.sh cub200
 The code is based on:
 - [DINO](https://github.com/facebookresearch/dino)
 - [DC](https://github.com/ShuoYang-1998/Few_Shot_Distribution_Calibration)
-- [DIML](https://github.com/wl-zhao/DIML).
+- [DIML](https://github.com/wl-zhao/DIML)
