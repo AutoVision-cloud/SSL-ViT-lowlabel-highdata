@@ -45,7 +45,7 @@ vits16 = torch.hub.load('facebookresearch/dino:main', 'dino_vits16')
 
 ## Visual Representation Learning with Self-Supervised ViT for _Low-Label_ _High-Data_ Regime
 ### Dataset Preparation
-Please follow the instruction in [FRN](https://github.com/Tsingularity/FRN) for few-shot image classification and [RevisitDML](https://github.com/Confusezius/Revisiting_Deep_Metric_Learning_PyTorch) for zero-shot image retrieval to download the datasets and put all the datasets in `ssl-vit-fewshot/data` and `DIML/data` folder.
+Please follow the instruction in [FRN](https://github.com/Tsingularity/FRN) for few-shot image classification and [RevisitDML](https://github.com/Confusezius/Revisiting_Deep_Metric_Learning_PyTorch) for zero-shot image retrieval to download the datasets and put the corresponding datasets in `ssl-vit-fewshot/data` and `DIML/data` folder.
 
 ### Training and Evaluation for few-shot image classification
 - The first step is to extract features for base and novel classes using the pretrained SSL-ViT.
