@@ -142,6 +142,8 @@ CUDA_VISIBLE_DEVICES=0 ./scripts/diml/test_diml.sh cub200
     </tr>
 </table>
 
+Disclaimer: This is not an official product and is meant to be a proof-of-concept and for academic/educational use only.
+
 ## Acknowledgement
 The code is based on:
 - [DINO](https://github.com/facebookresearch/dino)
