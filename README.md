@@ -1,5 +1,6 @@
 # Visual Representation Learning with Self-Supervised Attention for _Low-Label_ _High-Data_ Regime
 Created by [Prarthana Bhattacharyya](https://ca.linkedin.com/in/prarthana-bhattacharyya-44582a79).
+*Disclaimer:* This is not an official product and is meant to be a proof-of-concept and for academic/educational use only.
 
 This repository contains the PyTorch implementation for the paper **Visual Representation Learning with Self-Supervised Attention for _Low-Label_ _High-Data_ Regime**.
 
@@ -141,8 +142,6 @@ CUDA_VISIBLE_DEVICES=0 ./scripts/diml/test_diml.sh cub200
         <td><a href="https://drive.google.com/file/d/1_BVKjBl1btYdEHHT_jHeIU0A25y9pkFW/view?usp=sharing">cars_ssl-vit-ms.pth</a></td>
     </tr>
 </table>
-
-*Disclaimer:* This is not an official product and is meant to be a proof-of-concept and for academic/educational use only.
 
 ## Acknowledgement
 The code is based on:
