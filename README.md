@@ -3,7 +3,7 @@ Created by [Prarthana Bhattacharyya](https://ca.linkedin.com/in/prarthana-bhatta
 
 *Disclaimer:* This is not an official product and is meant to be a proof-of-concept and for academic/educational use only.
 
-This repository contains the PyTorch implementation for the paper [**Visual Representation Learning with Self-Supervised Attention for _Low-Label_ _High-Data_ Regime**](https://arxiv.org/abs/2201.08951) to be presented at ICASSP-2022.
+This repository contains the PyTorch implementation for the paper [**Visual Representation Learning with Self-Supervised Attention for _Low-Label_ _High-Data_ Regime**](https://arxiv.org/abs/2201.08951), to be presented at ICASSP-2022.
 
 Self-supervision has shown outstanding results for natural language processing, and more recently, for image recognition. Simultaneously, vision transformers and its variants have emerged as a promising and scalable alternative to convolutions on various computer vision tasks. In this paper, we are the first to question if self-supervised vision transformers (SSL-ViTs) can be adapted to two important computer vision tasks in the low-label, high-data regime: few-shot image classification and zero-shot image retrieval. The motivation is to reduce the number of manual annotations required to train a visual embedder, and to produce generalizable, semantically meaningful and robust embeddings. 
 
